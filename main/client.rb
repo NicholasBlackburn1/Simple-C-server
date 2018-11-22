@@ -1,3 +1,2 @@
-require 'net/http'
-response = Net::HTTP.get_response('localhost', '/')
-response.code
+require 'faraday'
+Faraday.new('http://localhost:8080', headers: { 'User-Agent' => 'test' }).get
