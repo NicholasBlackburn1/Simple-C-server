@@ -1,9 +1,12 @@
 require 'rutui'
 require 'rubygems'
 require 'excon'
+  # title
     puts "#{RuTui::Ansi.fg(49)} __RUBY HTTP CLIENT BY NICHOLAS BLACKBURN__"
     print RuTui::Ansi.clear_color
+    # started 
     puts"#{RuTui::Ansi.fg(11)} starting http responce"
+    
 response = Excon.get('http://192.168.1.1:8080')
 puts response.remote_ip 
 puts response.status  
