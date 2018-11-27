@@ -7,7 +7,8 @@ require 'excon'
     # started 
     puts"#{RuTui::Ansi.fg(11)} starting http responce"
     
-response = Excon.get('http://192.168.1.1:8080')
+response = Excon.get('http://localhost:80')
+puts "#{RuTui::Ansi.fg(49)} --STATUS"
 puts response.remote_ip 
 puts response.status  
 puts "#{RuTui::Ansi.fg(49)} --HTTP HEADER--"
